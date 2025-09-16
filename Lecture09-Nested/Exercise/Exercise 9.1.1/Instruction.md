@@ -4,4 +4,4 @@ where the multiplier (column) is running from 1 to 5. Please use 4 character-spa
 <br>
 For example: N = 10
 
-![Example]([Lecture09-Nested/Exercise/Image/9-1.1.png](https://github.com/NonstopGgggg/2190101-Computer-Programming/blob/5c56e7f649612daea32a51b0a514e19df3e8a8f6/Lecture09-Nested/Exercise/Image/9-1.1.png))
+![Example](./Image/9-1.1.png)
