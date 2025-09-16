@@ -20,16 +20,17 @@ def start_day(m,y):
     dayOfWeek = ((y-1) * 365 + leap) % 7
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+    # Add the days of the months before month m
     for i in range(m-1):
         dayOfWeek = (dayOfWeek + month_days[i]) % 7
 
+        # Check for leap year
         if m == 2 and (y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)):
             dayOfWeek = (dayOfWeek + 1) % 7
 
     return dayOfWeek
 
 def print_month(m,y):
-    # Find the start date of the month
     start = start_day(m,y)
 
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -50,6 +51,7 @@ def print_month(m,y):
     if start != 6:
         print(" " * (4 * (start+1)),end="")
 
+    # Print the calendar
     for i in range(1,month_days[m-1]+1):
 
         if (i + start) % 7 == 0:
