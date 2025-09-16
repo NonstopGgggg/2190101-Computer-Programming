@@ -4,4 +4,4 @@ where the multiplier (column) is running from 1 to 5. Please use 4 character-spa
 <br>
 For example: N = 10
 
-![Example](9-1.1.png)
+![Example](Image/9-1.1.png)
