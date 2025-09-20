@@ -1,6 +1,19 @@
 # We are given IDs and grades after that a letter q signaling the stop
 # then we are given some unique IDs
 # Our task is to increase the grade of that unique ID by one level if it can be increased.
+# Moreover, we have to print the ID in ascending order which matches with the grade.
+
+# Insertion sort
+def insertion(num,numList):
+    n = len(numList)
+    
+    # Loop to find the spot that num is less than the element
+    i = 0
+    while i < n and num > numList[i]:
+        i += 1
+            
+    return i
+
 grades = ["F","D","D+","C","C+","B","B+","A"]
 ID = []
 grade = []
@@ -13,8 +26,9 @@ while True:
     if val[0] == "q":
         break
     
-    ID.append(val[0])
-    grade.append(val[1])
+    position = insertion(val[0],ID)
+    ID.insert(position,val[0])
+    grade.insert(position,val[1])
     
 n = len(ID)
 UID = input().split()
