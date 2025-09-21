@@ -54,7 +54,7 @@ for i in range(n):
         
     elif ticket[i][:4] == "next":
         current += 1
-        print(f"Call {customer[current]}")
+        print(f"call {customer[current]}")
     
     elif ticket[i][:5] == "order":
         waitTime.append(int(ticket[i][6:]) - enterTime[current])
