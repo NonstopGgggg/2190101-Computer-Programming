@@ -2,6 +2,8 @@
 def to_dict(like_list):
     d = {}
     for pair in like_list:
+
+        # A key must exist to add any new value to that key.
         if pair[0] not in d:
             d[pair[0]] = [pair[1]]
 
