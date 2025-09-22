@@ -1,0 +1,1 @@
+##Exercise 9-5.2: Write the function ```sum_row(M)``` accepting ```M``` as a nested list as a matrix, that returns the list with the ```k```-th element being the sum of all matrix elements in the ```k```-th row.
