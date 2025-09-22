@@ -1,0 +1,1 @@
+##Exercise 9-5.3: Write the function ```sum_col(M)``` accepting ```M``` as a nested list as a matrix, that returns the list with the ```k```-th element being the sum of all matrix elements in the ```k```-th column. The maxtrix is gauranteed to have the same number of columns in all rows
