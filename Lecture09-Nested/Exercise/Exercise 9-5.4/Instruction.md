@@ -1,0 +1,1 @@
+##Exercise 9-5.4: Write the function ```identity(n)``` accepting an integer```n```, that returns a nested list representing the ```n``` by ```n``` identity matrix with 1 in all diagonal elements and zero otherwise. The maxtrix is gauranteed to have the same number of columns in all rows
