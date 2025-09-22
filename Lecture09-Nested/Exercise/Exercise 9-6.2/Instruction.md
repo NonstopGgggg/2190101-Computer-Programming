@@ -1,4 +1,4 @@
-##Exercise 9-6.2: Write the following functions all accepting one list of integers. You must use list comprehension to implement all functions.
+Exercise 9-6.2: Write the following functions all accepting one list of integers. You must use list comprehension to implement all functions.
 
 * ```to_list_of_strings(x)``: returns the list with all elements of the input list converted to strings, e.g., returning ```['1', '2', '3']``` for the input ```[1,2,3]```.
 
