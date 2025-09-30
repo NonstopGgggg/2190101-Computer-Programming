@@ -1,4 +1,5 @@
 # We are to implement 4 functions as commented
+
 def make_int_list(x):
     # receive x as string input and convert them into int lit
     # Ex: x = '12 34 5' returns [12,34,5]
