@@ -62,5 +62,5 @@ if string[6:21] == "next_twin_prime":
     print(next_twin_prime(val))
     
 # command for grader to work
-exec(input().split())
+exec(input().strip())
 
