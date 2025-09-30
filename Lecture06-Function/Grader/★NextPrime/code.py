@@ -46,21 +46,5 @@ def next_twin_prime(n):
 # Our input will be in the form of "print(function(n))"
 # function can be either next_prime or next_twin_prime
 # n can be any integer
-string = input()
-
-# extract the number i
-# we know that our number is inside a parentheses, so we will split the string with "(".
-# we should get ['print','function','n))'] and we can extract number from the last string excluding the "))".
-val = int(string.split("(")[-1][:-2])
-
-# check for next_prime()
-if string[6:16] == "next_prime":
-    print(next_prime(val))
-    
-# check for next_twin_prime
-if string[6:21] == "next_twin_prime":
-    print(next_twin_prime(val))
-    
-# command for grader to work
+# exec is used to execute code from input
 exec(input().strip())
-
