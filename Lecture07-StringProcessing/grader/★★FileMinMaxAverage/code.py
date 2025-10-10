@@ -8,13 +8,11 @@ minVal = 101
 avg = 0
 count = 0
 
-# extract scores from the valid lines (id[:2] >= year[-2:])
+# extract scores from the valid lines (admission year matches with input year)
 for i in open(name).readlines():
-    if i[:2] >= year[-2:]:
+    if i[:2] == year[-2:]:
         value = float(i[-5:-1])
         count += 1
-        
-        # Find the maximum, minimum and average
         avg += value
         maxVal = max(maxVal, value)
         minVal = min(minVal, value)
