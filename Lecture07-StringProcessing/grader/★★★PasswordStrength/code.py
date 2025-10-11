@@ -54,20 +54,27 @@ def sequenceChecker(passw, keyword):
     password = passw.lower()
 
     if keyword == "num":
-        if int(password[0]) + 1 == int(password[1]) and int(password[1]) + 1 == int(password[2]) and int(password[2]) + 1 == int(password[3]):
-            return True
-        
-        elif int(password[0]) - 1 == int(password[1]) and int(password[1]) - 1 == int(password[2]) and int(password[2]) - 1 == int(password[3]):
-            return True
+        # number sequences can be circular like 7890 or 8901
+        num = ["0123456789","1234567890"]
+
+        for number in num:
+            if number.index(password[0]) + 1 == number.index(password[1]) and number.index(password[1]) + 1 == number.index(password[2]) and number.index(password[2]) + 1 == number.index(password[3]):
+                return True
+            
+            elif number.index(password[0]) - 1 == number.index(password[1]) and number.index(password[1]) - 1 == number.index(password[2]) and number.index(password[2]) - 1 == number.index(password[3]):
+                return True
         
     elif keyword == "letter":
         alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-        if alphabet.index(password[0]) + 1 == alphabet.index(password[1]) and alphabet.index(password[1]) + 1 == alphabet.index(password[2]) and alphabet.index(password[2]) == alphabet.index(password[3]):
+        if alphabet.index(password[0]) + 1 == alphabet.index(password[1]) and alphabet.index(password[1]) + 1 == alphabet.index(password[2]) and alphabet.index(password[2]) + 1 == alphabet.index(password[3]):
+            return True
+        
+        elif alphabet.index(password[0]) - 1 == alphabet.index(password[1]) and alphabet.index(password[1]) - 1 == alphabet.index(password[2]) and alphabet.index(password[2]) - 1 == alphabet.index(password[3]):
             return True
         
     elif keyword == "keyboard":
-        keyboard = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
+        keyboard = ["!@#$%^&*()_+","qwertyuiop", "asdfghjkl", "zxcvbnm"]
 
         for row in keyboard:
             if password[0] in row and password[1] in row and password[2] in row and password[3] in row:
@@ -98,9 +105,8 @@ def letterSequence(password):
             
 def keyboardSequence(password):
     for i in range(len(password) - 3):
-        if password[i].isalpha() and password[i + 1].isalpha() and password[i + 2].isalpha() and password[i + 3].isalpha():
-            if sequenceChecker(password[i:i+4], "keyboard"):
-                return True
+        if sequenceChecker(password[i:i+4], "keyboard"):
+            return True
             
     return False
             
