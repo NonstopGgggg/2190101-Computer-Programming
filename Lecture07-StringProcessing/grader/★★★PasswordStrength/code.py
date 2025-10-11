@@ -18,14 +18,16 @@ def length(password):
 
 def noLowerCase(password):
     for char in password:
-        if char.isupper():
+        if char.islower():
             return False
+        
     return True
 
 def noUpperCase(password):
     for char in password:
-        if char.islower():
+        if char.isupper():
             return False
+        
     return True
 
 def noNumber(password):
