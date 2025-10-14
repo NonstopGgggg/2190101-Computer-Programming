@@ -15,7 +15,8 @@ def charCount(string):
     chars = {}
     
     for i in s:
-        chars[i] = chars.get(i,0) + 1
+        if i.isalpha():
+            chars[i] = chars.get(i,0) + 1
 
     return chars
 
