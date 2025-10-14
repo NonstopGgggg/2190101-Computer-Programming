@@ -6,4 +6,9 @@ def reverse(d):
     # dictionary has no repeated value
     return {v:k for k, v in d.items()}
     
+def keys(d,v):
+  for i in d:
+    if d[i] == v:
+      return v
+    
 exec(input().strip())
