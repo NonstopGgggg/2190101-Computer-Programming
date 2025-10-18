@@ -33,5 +33,4 @@ if not ans:
     print("Not found")
     
 else:
-    for i in ans:
-        print(i)
+    print("\n".join(ans))
