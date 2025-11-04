@@ -1,4 +1,5 @@
 # given n sets, find the union and intersection of them.
+# input
 n = int(input())
 ans = [set(),set()]
 
@@ -12,6 +13,7 @@ for i in range(n):
         
     else:
         ans = [val,val]
-        
+
+# output
 print(len(ans[0]))
 print(len(ans[1]))
