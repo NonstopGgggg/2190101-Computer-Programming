@@ -17,7 +17,6 @@ def distanceTo(p, Points):
  # returns 1-d array with the size of n. The array stores distance from p
  # to each point in Points.
     points = Points.T
-    result = ((points[0]-p[0])**2 + (points[1]-p[1])**2)**0.5
-    return result
+    return ((points[0]-p[0])**2 + (points[1]-p[1])**2)**0.5
 
 exec(input().strip()) # must have this line when submitting to grader
