@@ -35,7 +35,7 @@ class Complex:
 
         # printing
         if realPart == "" and imaginePart == "":
-            return 0
+            return "0"
         
         elif realPart == "":
             return imaginePart
@@ -94,4 +94,3 @@ elif t == 2 : print(c2)
 elif t == 3 : print(c1+c2)
 elif t == 4 : print(c1*c2)
 else : print(c1/c2)
-
